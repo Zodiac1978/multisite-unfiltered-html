@@ -1,0 +1,29 @@
+{
+	"name": "zodiac1978/multisite-unfiltered-html",
+	"description": "Grants unfiltered_html to selected users or roles in a WordPress multisite.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Torsten Landsiedel",
+			"homepage": "https://torstenlandsiedel.de"
+		}
+	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"squizlabs/php_codesniffer": "^3.13",
+		"wp-coding-standards/wpcs": "^3.2"
+	},
+	"scripts": {
+		"lint": "phpcs --standard=WordPress --extensions=php --ignore=vendor ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"sort-packages": true
+	}
+}

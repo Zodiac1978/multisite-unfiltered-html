@@ -38,8 +38,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: WPCS check
-        uses: 10up/wpcs-action@stable
+      - uses: shivammathur/setup-php@v2
         with:
-          standard: WordPress
-          paths: .
+          php-version: '7.4'
+          coverage: none
+      - uses: ramsey/composer-install@v3
+      - name: WPCS check
+        run: composer lint
